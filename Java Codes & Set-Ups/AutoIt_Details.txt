@@ -1,0 +1,28 @@
+=====>>>>  Steps to work with AutoIt
+
+Step 1 = Download and install AutoIt from the website ==>  https://www.autoitscript.com/site/autoit/downloads
+
+Step 2 = Download and install AutoIt Script Editor from the same website
+
+Step 3 = Navigate to the location C:\Program Files (x86)\AutoIt3 and double click on the application Au3Info which is the "Object spy"
+
+Step 4 = Create AutoIt Script and Test:-
+		1. Navigate to C:\Program Files (x86)\AutoIt3\SciTE and launch the "editor" application SciTE.
+		2. Write the program on the editor SciTE by inspecting the objects using Au3Info.
+		3. Click and hold on the spy '+' and drag it to the application which needs to be spied
+		4. Save the file, post saving right click on the saved file and select "Compile Script (x64)" x64- refers to OS's bite
+		5. Post compiling, a new file with ".exe" extension will get saved which can be used in java code
+
+Step 5 = Implement the .exe file in Java code with the help of below command
+
+
+
+=====>>>> Another way to work with the AutoIT with Java
+
+Refer the website https://www.joecolantonio.com/selenium-autoit
+
+To register the DLL file, Paste the command in Run window ===>  regsvr32 C:\Users\Ravi.V\Java_workspace\Auto_IT\tools\AutoIt\AutoItX3.dll 
+
+
+
+	

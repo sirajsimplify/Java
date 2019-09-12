@@ -1,0 +1,57 @@
+===>> Git and GitHub <<===
+
+What is Git  	==> VCS - Version control system, To track changes in files and folders.
+		==> To collaborate in teams
+		==> Free and Open source system
+
+... Version control system ...
+1. Centralized VCS
+	==> One copy of repository placed on server, used by multiple people.
+
+2. Distributed VCS
+	==> It has repository on server as well as on the local machine. People can use the local repository and the local repository will 
+		get updated by the centralized repository.
+
+What is GitHub	==> A website to upload repository online.
+		Adv => Back up of reposity provided,
+			=> Provides visual Interface to your repository
+			=> Collaboration made easy
+
+===>> Git is not related to GitHub.
+
+
+==> How to install Git <==
+
+Step 1 - Before downloading Git, verify the installation of Git by passing the command (git --version) in cmd prompt
+
+Step 2 - Download and Install Git from the website ==> https://git-scm.com/download/win (use local windows console while installing)
+
+Step 3 - Add project to Git
+		==> Create Folder and navigate to that folder through cmd or, Go to the folder and in the folder structure bar type cmd.
+
+Step 4 - Once the cmd prompt window will get opened, type => git init 
+	This will create a .git semi visible folder
+
+Step 5 - To add any file, first check the status by => git status
+
+....Git Commands.....
+To set username and password globally use => 	git config --global user.email "sirajparveez@gmail.com"
+						git config --global user.name "sirajsimplify"
+						git config --global
+1. git init => to create a project in Git
+2. git status => To check the status
+3. git add => To add the file (git add test1.txt (To add selected files) or git add * (To all files/Folders) or git add . (To add every thing with the extensions)
+4. git commit -m "message here which needs to be printed" => To print any message while commiting
+5. git log
+6. git --help
+
+Step 6 - How to add project to the remote location like github, Bitbucket etc
+	Here we re using the Github and the URl is => https://github.com/sirajsimplify/Java => usn: sirajparveez@gmail.com (or) sirajsimplify => pwd: Siraj@121
+
+Command - git remote add origin https://github.com/sirajsimplify/Java.git  (To add a new project in remote server)
+	  git push -u origin master (To push the project)
+
+	git remote add upstream  https://github.com/sirajsimplify/Java.git (To update existing project in the github)
+	git push -u origin master
+
+	We can directly delete the repository from the project in Github by going to Edit> delete repository

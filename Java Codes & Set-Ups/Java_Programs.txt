@@ -1,0 +1,234 @@
+====>>> To create multiple folders <<<====
+
+public class No_Use {	
+	public static void main(String[] args) {
+		File fullPathFile = new File("Create_Delete_Folders/science/0000060001/science/Hello/HHH/ii");
+		 fullPathFile.getParentFile().mkdirs(); 
+		 fullPathFile.mkdir();
+	}
+}
+
+====>>> To Delete multiple folders  <<<====
+
+public class DeleteMultipleFolders {
+	
+		// This method successfully deletes all the folders
+	    public static final String SRC_FOLDER = "Create_Delete_Folders/science";
+		
+	    public static void main(String[] args)
+	    {	
+	    	DeleteMultipleFolders ca = new DeleteMultipleFolders();
+	    	File directory = new File(SRC_FOLDER);
+	 
+	    	//make sure directory exists
+	    	if(!directory.exists())
+	    	{	 
+	           System.out.println("Directory does not exist.");
+	           System.exit(0);	 
+	        	}
+	    	else
+	    	{	 
+	           try
+	           {	        	   
+	               ca.delete(directory);	        	
+	           }
+	           catch(IOException e)
+	           {
+	               e.printStackTrace();
+	               System.exit(0);
+	           }
+	        }	 
+	    	System.out.println("Done");
+	    }
+	 
+	    public void delete(File file)
+	    	throws IOException
+	    {	 
+	    	if(file.isDirectory())
+	    	{	 
+	    		//directory is empty, then delete it
+	    		if(file.list().length==0)
+	    			{	    			
+	    				file.delete();
+	    				System.out.println("Directory is deleted : "+ file.getAbsolutePath());	    			
+	    			}
+	    		else
+	    			{//list all the directory contents
+	    				String files[] = file.list();	     
+	    				for (String temp : files) 
+	    					{//construct the file structure
+	    						File fileDelete = new File(file, temp);
+	    						//recursive delete
+	    						delete(fileDelete);
+	    					}	        		
+	    				//check the directory again, if empty then delete it
+	    				if(file.list().length==0)
+	    					{
+	    						file.delete();
+	    						System.out.println("Directory is deleted : " + file.getAbsolutePath());
+	    					}
+	    			}	    		
+	    	}
+	    	else
+	    	{//if file, then delete it
+	    		file.delete();
+	    		System.out.println("File is deleted : " + file.getAbsolutePath());
+	    	}
+	    }
+}
+
+=====>>> To Create and delete multiple folders  <<<=====
+
+	public class CreateAndDelete_Multiple_Folders {
+
+	// This method successfully creates multiple folders and deleted multiple folders
+	public static void main(String[] args) {
+		
+		
+		File fullPathFile;
+		File fullPathFile1;
+		String filename = "Create_Delete_Folders/science/0000060001/science/Hello/HHH/ii";  // path to create multiple folders
+		String filename1 = "Create_Delete_Folders/science";  // Give the folder name which has to be deleted
+		System.out.println("Started");
+		  try {					
+			 fullPathFile = new File(filename);
+			 fullPathFile.getParentFile().mkdirs();  // This line creates all the parent folders except the last folder
+			 boolean successful = fullPathFile.mkdir();
+			 	if (successful)
+			 	{
+			 		// creating the directory succeeded
+			 		System.out.println("directory was created successfully");
+			 	}
+			 	else
+			 	{
+			 		// creating the directory failed
+			 		System.out.println("failed trying to create the directory");
+			 	}
+			 	System.out.println("File Creation completed");	
+			 	fullPathFile1 = new File(filename1);
+//			 	th.delete(fullPathFile1);
+		
+			 	deleteDirectory(filename1);
+		
+		  		} 
+		  catch (Exception e) {
+			e.printStackTrace();
+		  		}
+		}
+	
+	public static void deleteDirectory(String directoryFilePath) throws Exception  {
+	      Path directory = Paths.get(directoryFilePath);
+	      if (Files.exists(directory))
+	      {
+	          Files.walkFileTree(directory, new SimpleFileVisitor<Path>()
+	          {
+	              @Override
+	              public FileVisitResult visitFile(Path path, BasicFileAttributes basicFileAttributes) throws IOException
+	              {
+	                  Files.delete(path);
+	                  return FileVisitResult.CONTINUE;
+	              }
+	              @Override
+	              public FileVisitResult postVisitDirectory(Path directory, IOException ioException) throws IOException
+	              {
+	                  Files.delete(directory);
+	                  return FileVisitResult.CONTINUE;
+	              }
+	          });
+	          System.out.println("Directory was deleted");
+	         }      
+	  	}
+}
+
+=====>>> Zip files <<<=====
+
+http://www.java2novice.com/java-collections-and-util/zip/single/
+
+=====>>> Unzip and create folders to place the zip files  <<<=====
+
+public class Unzip_Utilivisor {	
+	
+	// Successfully unzips the files to their respective folders
+	public static void main(String a[]){
+        
+		System.out.println("Zip File reading and creation of folders has started");
+    	Unzip_Utilivisor mfe = new Unzip_Utilivisor();
+        mfe.printFileList_And_Create_Folders("Zip_UnZP/1 Barker Avenue 2019 - 2 Package.zip");
+        
+        System.out.println("Unzipping of folder has started");
+        mfe.unzipFile("Zip_UnZP/1 Barker Avenue 2019 - 2 Package.zip");
+        
+        System.out.println("Process completed");
+    }
+	 
+	public void printFileList_And_Create_Folders(String filePath){
+	
+		File fullPathFile;
+        FileInputStream fis = null;
+        ZipInputStream zipIs = null;
+        ZipEntry zEntry = null;
+        String ll="";      
+          
+        try {
+            fis = new FileInputStream(filePath);
+            zipIs = new ZipInputStream(new BufferedInputStream(fis));
+            
+            while((zEntry = zipIs.getNextEntry()) != null)
+            	{
+                	System.out.println(zEntry.getName());
+                	//al1.add(zEntry.getName());
+                	String [] likl = zEntry.getName().split("/");
+                
+                	if(likl.length>1)
+                		{
+                			// To check the folder if present inside the folder without having only file
+                			String filename = "Zip_UnZP/Utilivisor/"+zEntry.getName();
+                			System.out.println("File name is = " + filename);
+                			fullPathFile = new File(filename);
+                			fullPathFile.getParentFile().mkdirs();
+                		}                
+                	ll = ll +"/"+ zEntry.getName();
+            	}
+            	zipIs.close();
+        	} 
+        	catch (Exception e) 
+        	{
+        		e.printStackTrace();        	
+        	}
+    }
+
+	public void unzipFile(String filePath){
+    
+		FileInputStream fis = null;
+    	ZipInputStream zipIs = null;
+    	ZipEntry zEntry = null;
+    	try {
+    		fis = new FileInputStream(filePath);
+    		zipIs = new ZipInputStream(new BufferedInputStream(fis));
+    		while((zEntry = zipIs.getNextEntry()) != null){
+    			try{
+    				byte[] tmp = new byte[4*1024];
+    				FileOutputStream fos = null;
+    				String opFilePath = "Zip_UnZP/Utilivisor/"+zEntry.getName();
+    				System.out.println("Extracting file to "+opFilePath);
+    				fos = new FileOutputStream(opFilePath);
+    				int size = 0;
+    				while((size = zipIs.read(tmp)) != -1)
+    					{
+    						fos.write(tmp, 0 , size);
+    					}
+    				fos.flush();
+    				fos.close();
+    				} 
+    			catch(Exception ex){                     
+    			}
+    		}
+    		zipIs.close();
+    	} 
+    		catch (Exception e) {
+    		e.printStackTrace();
+    		}
+		}    
+}
+
+

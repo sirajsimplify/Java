@@ -1,0 +1,6 @@
+===> To run testng.xml for Java project from the command prompt  <===
+
+Step 1 - Go to the Java project's bin path where the bin folder is located eg C:\Users\Ravi.V\Java_workspace\Jenkins_Integration_Java  
+Step 2 - launch the cmd prompt and type ==> cd C:\Users\Ravi.V\Java_workspace\Jenkins_Integration_Java
+Step 3 - type into the cmd prompt ==> C:\Users\Ravi.V\Java_workspace\Jenkins_Integration_Java\bin;C:\Users\Ravi.V\Java_workspace\Jenkins_Integration_Java\(Folder containing jar)\*;
+Step 4 - Type into cmd prompt ==>  java org.testng.TestNG testng.xml

@@ -1,0 +1,22 @@
+  >>>>>>>>>>   WINIUM Tool Operation    <<<<<<<<<
+
+Step 1 - Create a maven project and add the winium dependency which will includes all the selenium drivers needed to automate the feature
+	 
+	<dependency>
+        <groupId>com.github.2gis.winium</groupId>
+        <artifactId>winium-webdriver</artifactId>
+        <version>0.1.0-1</version>
+    	</dependency>
+
+Step 2 - Download the winium driver from  ==== https://github.com/2gis/Winium.Desktop/releases
+	Create a Java class 
+
+	DesktopOptions option = new DesktopOptions();		
+	option.setApplicationPath("C:\\Windows\\System32\\calc.exe");  // calculator app is being tested and the path is pasted
+
+
+Step 3 - To spy the object, use UISpy.exe which can be downloaded from the link ====  https://github.com/blackrosezy/gui-inspect-tool
+
+Step 4 - Open the UISpy.exe file, click on the mouse icon then press and hold control button and mouse over to the element which has to be inspected, we can see the properties of the object on the UISpy screen
+
+Step 5 - To find the winium supported commands goto   ====   https://github.com/2gis/Winium.Desktop/wiki/Supported-Commands

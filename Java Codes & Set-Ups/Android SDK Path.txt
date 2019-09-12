@@ -1,0 +1,99 @@
+C:\Users\Ravi.V\AppData\Local\Android\Sdk  (We can install different versions of SDK from this location)
+
+
+How to set-up Appium on Windows
+
+1. Install JDK 1.8  (Check JDK and JRE in the JAVA installed location)
+
+2. Install Android Studio
+
+    a. https://developer.android.com/studio/index.html   -- download link  (download Android studio)
+    b. Install SDK
+    c. Install Android API's(Emulator - 7,8,9)   (Configure > SDK manager)
+    d. Download and Install Rapid Environment Editor
+    e. Set the system path variable in Rapid Environment Editor : (Restart as Administration - click)
+	
+	i. JAVA_HOME   (Click + icon to create a new variable JAVA_HOME, and inside this variable paste ==  C:\Program Files\Java\jdk1.8.0_211)
+	
+	ii. ANDROID_HOME   (Create a new variable ANDROID_HOME, go to android studio and select the sdk manager path ==  C:\Users\Ravi.V\AppData\Local\Android\Sdk)
+	
+	iii. Path
+	      1. JRE               (Inside the path, paste ==  C:\Program Files\Java\jre1.8.0_212\bin)
+	      2. Tools             (Inside the path, paste ==  C:\Users\Ravi.V\AppData\Local\Android\Sdk\tools)
+	      3. Tools/bin         (Inside the path, paste ==  C:\Users\Ravi.V\AppData\Local\Android\Sdk\tools\bin)
+	      4. Platform-tools    (Inside the path, paste ==  C:\Users\Ravi.V\AppData\Local\Android\Sdk\platform-tools)
+
+3. Open CMD prompt and run: sdkmanager --list
+	a. Run this comman to see the data availability, or to show all the SDK manager repository
+
+4. Type: uiautomatorviewer in cmd prompt 
+
+5. Set up AVD (Android Virtual Device) manager and select the device which we want to test :
+
+		Click configure > AVD Manager > Create Virtual device > Pixel 5.5 (Phone of your choice) > Click on download
+		Once downloaded click on the finish button and select the OREO, click Next > Give AVD name(default is ok) > Select the Portrait frame 
+		> Enable device frame > Finish
+
+6. A new window of 'Your Virtual Devices' will be opened, Click on the play button. This will start the AVD
+
+7. Appium desktop installation:
+
+	a. Download the appium desktop from ==  https://github.com/appium/appium-desktop/releases/tag/v1.14.0
+	b. Configure Appium Desktop with : IP - 127.0.0.1 and port - 4723
+	c. Appium server is running
+
+
+
+
+=========>>>  HighLights  <<<=========
+
+1. Launch Appium 
+2. Launch the Android Studio
+3. Launch the UIAutomator 
+
+
+=========>>>>   Install appium using NODE.JS   <<<<============
+
+1. Download and Install node.js (from  https://nodejs.org/en/download/) and check  ====>  node --version in cmd, also check where node and where npm
+2. To download appium from node.js enter  ====>  npm install -g appium
+3. To check the appium Installation  ====>  appium --version
+4. Start appium using the CMD enter ====>  appium  in cmd, then to stop press ctrl + c and enter y 
+
+5. npm doctor  =  Tool to verify appium installation   ====>  https://github.com/appium/appium-doctor
+
+6. Install npm doctor by entering the code   ====>  npm install appium-doctor -g  
+
+7. If needed To uninstall appium from command prompt  ====>  npm uninstall -g appium  
+
+8. sdkmanager == To get platform and platform-tools folder inside the sdk tool folder
+
+9. Set Environment variables ANDROID_HOME= location of android-sdk folder
+	Path : append the path of platform-tools folder
+
+10. To check the devices connected we enter ==> adb devices  in cmd (this will show the list of devices)(adb - android device bridge)
+
+11. Make device ready
+	-enable developer mode
+	-make USB Debugging on
+
+12. create a maven project and add the dependencies of Selenium, appium java client, Start the appium server(either by cmd or appium desktop)
+
+13. Start coding by adding desired capabilities
+
+======================================
+
+To download the java client for Appium
+https://search.maven.org/search?q=g:io.appium%20AND%20a:java-client
+https://github.com/appium/java-client
+
+To get the Appium tutorials 
+https://developer.android.com/studio/run/emulator
+
+Appium introduction page
+http://appium.io/docs/en/about-appium/intro/?lang=en
+
+Desired capabilities
+http://appium.io/docs/en/about-appium/getting-started/
+
+
+

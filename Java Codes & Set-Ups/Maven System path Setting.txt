@@ -1,0 +1,14 @@
+===>> How to set mavenpath in system environment variables <<===
+
+Step 1 -  download maven for windows from the website ==>  http://maven.apache.org/download.cgi
+
+Step 2 - Copy the maven downloaded file path till the bin folder eg. F:\Java_Files\apache-maven-3.6.2
+
+Step 3 - Goto system's Environment variables and add the maven path -System Variables- by clicking new and 
+	variable name = MAVEN_HOME
+	variable value = F:\Java_Files\apache-maven-3.6.2		(and save the settings)
+
+Step 4 - Add the -System variables- path by clicking on the path ==> edit
+	add ==> %MAVEN_HOME%\bin  And save the settings
+
+Step 5 - To verify the installation, enter ==>  mvn -version <== in cmd prompt	

@@ -1,0 +1,30 @@
+===>>> How to use SonarQube <<<===
+
+Step 1 - Download SonarQube 7.1(Compatible with Java 8) from https://www.sonarqube.org/downloads/
+
+Step 2 -  Set the User variable path in system environment variable as ==> F:\Java_Files\sonar-scanner-cli-4.0.0.1744-windows\sonar-scanner-4.0.0.1744-windows\bin
+
+Step 3 - Execute the file ==> F:\Java_Files\Sonar\sonarqube-7.1\sonarqube-7.1\bin\StartSonar.bat by double clicking on it
+
+Step 4 - Go to cmd prompt and navigate to the location(Java Project root folder) C:\Users\Ravi.V\Java_workspace\Jenkins_Integration_Maven
+	
+	==> 	mvn sonar:sonar clean
+
+	==>	mvn sonar:sonar clean install
+	
+Step 5 - Launch the URL http://localhost:9000 (usn=admin, pwd=admin)
+
+
+
+
+===>> How to add project to the Sonar <<==
+
+Step 1 - Start the sonar server by executing the file ==> F:\Java_Files\Sonar\sonarqube-7.1\sonarqube-7.1\bin\StartSonar.bat by double clicking on it
+
+Step 2 - Open cmd prompt ==> Go to the directory whose code needs to be checked (Java Project root folder) eg ==>cd C:\Users\Ravi.V\Java_workspace\Jenkins_Integration_Maven
+
+Step 3 - pass the command ==> mvn sonar:sonar clean
+
+	and then pass the command ==>	mvn sonar:sonar clean install
+
+Step 4 - Go to the http://localhost:9000 > Login as admin (usn=admin, pwd=admin) > Navigate to the specific project to see what are the code situation

@@ -1,0 +1,47 @@
+>>>>>>>>>>>>>  Python (Programming language) <<<<<<<<<<<<< 
+
+===<<  Installation and set-up  >>===
+Download and install python from the website ==> https://www.python.org/downloads/windows/
+Download and install Pycharm from the website ==> https://www.jetbrains.com/pycharm/download/#section=windows
+
+
+
+===>> To install Selenium on the Python, Right clickon the project and copy the path, paste the path in cmd prompt and hit enter
+	- Now paste the command 'pip install selenium' once it gets installed enter the command 'python -m pip install --upgrade pip' and hit enter
+
+===>> Introduction
+
+-> High level programming language (i.e, programmer friendly language, but not machine friendly)
+-> General purpose high level programming language. Consice code.
+-> Guido Van Rossum developed python language in Netherland(introduced in 1989, rel in 20-feb-1991)
+-> Java in 1995
+
+Application areas of python:
+-> 
+
+
+Features of python:
+
+
+
+Limitations of python:
+
+
+
+Flavours of python:
+
+
+
+Python versions:
+
+
+
+Identifiers:
+
+
+
+Reserved words:
+
+
+
+Data types: (14 data types and Type-casting)

@@ -1,0 +1,10 @@
+Step 1 - Appium has to be downloaded from appium.io
+
+Step 2 - Windows sdk, node.js has to downloaded from the microsoft website
+
+Step 3 - Developers option has to enable in the control panel, refer >>>   https://github.com/microsoft/WinAppDriver
+
+Step 4 - Launch the windriver by following the link  >>> https://www.swtestacademy.com/automation-windows-winappdriver/ 
+on cmd
+
+Step 5 - Execute the java program

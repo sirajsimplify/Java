@@ -1,0 +1,118 @@
+Java examples by Gregg :  ==>    http://www.java2novice.com/java-collections-and-util/zip/single/
+
+=================================================================
+
+****** To automate check box and radio btn  (the WebElement type should be radio and checkbox)
+
+Select selectByValue = new Select(driver.findElement(By.id("SelectID_One")));
+selectByValue.selectByValue("greenvalue");
+selectByValue.selectByVisibleText("Red");
+selectByValue.selectByIndex(2);
+
+<input type="radio" id="gender">
+<input type="checkbox" id="group-name">
+
+RadioBtnEle.isDisplayed()   // this returns a Boolean value, if it returns true then said radio button is present on the webpage or it returns False.
+RadioBtnEle.isEnabled()    // this returns a Boolean value, if it returns true then said radio button is enabled on the webpage or it returns False
+RadioBtnEle.isSelected()   // this returns a Boolean value, if it returns true then said radio button is selected or it returns False
+
+RadioBtnEle.click()   // To click on the radio or checkbox
+
+====================================================================
+
+Lets say we have below HTML structure:
+
+<div class="third_level_ancestor">
+    <nav class="second_level_ancestor">
+        <div class="parent">
+            <span>Child</span>
+        </div>
+    </nav>
+</div>
+
+
+1. -- //span/parent::* - returns any element which is direct parent.
+output is <div class="parent">
+
+2. -- //span/parent::div[@class="parent"] - 
+returns parent element only of exact node type and only if specified predicate is True.
+Output: <div class="parent">
+
+3. -- //span/ancestor::* - returns all ancestors (including parent).
+Output: <div class="parent">, <nav class="second_level_ancestor">, <div class="third_level_ancestor">...
+
+4. -- //span/ancestor-or-self::* - returns all ancestors and current element itself.
+Output: <span>Child</span>, <div class="parent">, <nav class="second_level_ancestor">, <div class="third_level_ancestor">
+
+5. -- //span/ancestor::div[2] - returns second ancestor (starting from parent) of type div
+Output: <div class="third_level_ancestor">
+
+
+Example:    <a>
+    <!-- some other icons and texts -->
+    <span>Close</span>
+</a>
+
+1. -- driver.findElement(By.xpath("//a[.//span[text()='Close']]"));
+2. -- driver.findElement(By.xpath("//div[*//span[text()='Close']]"));    
+*//span, it will look for most parent div element of given span.
+
+***** Preceding-sibling example:
+
+    <div class="parent">
+        <span>Child</span>
+	<span>Hello</span>
+	<span>Forward</span>
+     </div>
+
+//*[text()='Hello']/preceding-sibling::span[text()='Child']
+Output: <span>Child</span>
+
+//span[text()='Hello']//following-sibling::span[text()=Forward]
+Output: <span>Forward</span>
+
+
+****** SVG (Scalable Vector Graphics) - xpath
+
+<svg viewBox="0 0 74 37"
+  <g id="YGlOvc"></g>
+</svg>
+
+//*[local-name()='svg']/*[local-name()='path' and @stroke='#2074a9']
+
+
+******* Replace few characters from the string
+
+String hh = "$66,565 $$s/Month";
+	String ii = hh.replace("/", "").replace("$", "").replaceAll("([a-z])", "").replaceAll("([A-Z])", "").replace(",", "").trim();
+	System.out.println(ii);
+	int i = Integer.parseInt(ii);
+	System.out.println(i);
+
+******* Except number, remove everything
+String text = "This - text ! has \\ /allot # of % special % characters"; 
+
+text = text.replaceAll("[^a-zA-Z0-9]", "");  // Except a-z, A-Z, 0-9 remove everything
+
+output: Thistexthasallotofspecialcharacters
+
+
+******* To scroll to view element 
+
+WebElement kk = driver.findElement(By.xpath("//h4[text()='Correspondence']"));
+JavascriptExecutor ju = (JavascriptExecutor) driver;
+ju.executeScript("arguments[0].scrollIntoView(true);", kk)
+
+****** To click using JavaScript, == It helps to click on the element which is visible when we scroll it.
+
+WebElement yuy = driver.findElement(By.xpath("//h4[text()='Correspondence']"));
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", yuy);
+
+
+****** To Validate 2 text elements 
+
+Action Keyword -- storeValue   >>>> Store value-1  (Parameter store_value1), xpath has to be given in the object logical name
+Action Keyword -- validateText   >>>> Store and compare value 2 (Parameter store_value1),  xpath has to be given in the object logical name
+
+
+

@@ -1,0 +1,24 @@
+>>>>>>>> Python <<<<<<<<<
+
+1. The source code(.py) will get converted to byte code(.pyc) by compiler and the (.pyc) file will get executed by the PVM(python virtual machine). 
+PVM can directly read .py file.
+
+2. Reason to convert source code to byte code is that, the next time when PVM tries to execute the code, it will directly read (.pyc) file and 
+execute it which increases the execution speed.
+
+3. To compile python file, use the below code in the pycharm terminal with the proper path along with the command ==> python -m py_compile Datatypes.py
+
+	(venv) C:\Users\Ravi.V\PycharmProjects\Python_Naveen_Core_Concepts\Python_Class1_Practise>python -m py_compile Datatypes.py
+
+	Also, use the below code in editor to compile:
+		import py_compile
+		py_compile.compile('Datatypes.py')
+
+4. Indentation (alignment)
+
+>>>> Datatypes concept  <<<<
+
+1. No need to declare any type of variable
+2. If the number are same then the variables will be pointed to the same identity i.e, if x=10 and y=x. 
+	Identities of both the variables x and y will remain the same as both of them having same number
+3.
