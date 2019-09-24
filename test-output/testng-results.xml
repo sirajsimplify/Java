@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19879" started-at="2019-08-20T12:38:34Z" finished-at="2019-08-20T12:38:54Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19879" started-at="2019-08-20T12:38:34Z" finished-at="2019-08-20T12:38:54Z">
+      <class name="Extent_Report_4_Implementation.Sample_extent1">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c]" name="startReport" is-config="true" duration-ms="209" started-at="2019-08-20T18:08:34Z" finished-at="2019-08-20T18:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c]" name="setup" is-config="true" duration-ms="9399" started-at="2019-08-20T18:08:35Z" finished-at="2019-08-20T18:08:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="verifyLogo()[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c]" name="verifyLogo" duration-ms="55" started-at="2019-08-20T18:08:44Z" finished-at="2019-08-20T18:08:44Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertFalse(Assert.java:63)
+	at org.testng.Assert.assertFalse(Assert.java:73)
+	at Extent_Report_4_Implementation.Sample_extent1.verifyLogo(Sample_extent1.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogo -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c]" name="getResult" is-config="true" duration-ms="874" started-at="2019-08-20T18:08:44Z" finished-at="2019-08-20T18:08:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogo status=FAILURE method=Sample_extent1.verifyLogo()[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c]" name="setup" is-config="true" duration-ms="8486" started-at="2019-08-20T18:08:45Z" finished-at="2019-08-20T18:08:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c]" name="verifyTitle" duration-ms="5" started-at="2019-08-20T18:08:53Z" finished-at="2019-08-20T18:08:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c]" name="getResult" is-config="true" duration-ms="585" started-at="2019-08-20T18:08:53Z" finished-at="2019-08-20T18:08:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTitle status=SUCCESS method=Sample_extent1.verifyTitle()[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:Extent_Report_4_Implementation.Sample_extent1@13fee20c]" name="endReport" is-config="true" duration-ms="254" started-at="2019-08-20T18:08:54Z" finished-at="2019-08-20T18:08:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- Extent_Report_4_Implementation.Sample_extent1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
