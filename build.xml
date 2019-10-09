@@ -1,0 +1,15 @@
+<?xml version = "1.0"?>
+<project name = "Hello World Project" default = "info">
+   <target name = "info" depends = "deploy">
+      <echo>Hello World - Welcome to Apache Ant!</echo>
+   </target>
+   
+	<target name = "deploy" depends = "package">
+	<echo>Hello World - Welcome to deploy deploy!</echo>
+	</target>
+
+	<target name = "package" >
+	<echo>Hello World - Welcome to package package!</echo>
+	</target>
+	
+</project>

@@ -1,0 +1,17 @@
+<?xml version = "1.0"?>
+<project name = "Java Hello world" default = "Compile">
+
+   <target name = "Compile" depends = "Run">
+      <echo>Compilation of the Java project has started...</echo>
+	  <Javac srcdir="" destdir="" />
+   </target>
+   
+	<target name = "deploy" depends = "package">
+	<echo>Hello World - Welcome to deploy deploy!</echo>
+	</target>
+
+	<target name = "package" >
+	<echo>Hello World - Welcome to package package!</echo>
+	</target>
+	
+</project>
